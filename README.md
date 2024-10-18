@@ -1,5 +1,7 @@
 # BadSongFixer
-Tool designed to review notes.mid files for YARG/Clone Hero and correct ambigous title meta-data. 
+Tool designed to review `notes.mid` files for YARG/Clone Hero and correct ambigous title meta-data.\
+Addresses the following error from `badsongs.txt`\
+`At least one track fails midi spec for containing multiple unique track names (thus making it ambiguous)`
 
 ## Features
 - Renames the first track (`Track 1`) to the format: `Artist - Song Name` based on the `song.ini` file.
@@ -8,9 +10,10 @@ Tool designed to review notes.mid files for YARG/Clone Hero and correct ambigous
 - Creates a backup of the original `notes.mid` file before saving any changes.
 - The script echoes key information during processing, such as:
   - The current and new title of `Track 1`.
+  - Any valid track titles found.
   - Any invalid track titles found and whether they are removed.
-  - Renaming of `notes.mid` to `notes.mid.old` if changes are made.
   - Warnings for tracks with no titles
+  - Backups of `notes.mid` to `notes.mid.old` if changes are made.
   - If no changes are necessary, the script will indicate that the file is already valid.
 
 ## Usage
